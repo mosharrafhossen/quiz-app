@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Quiz App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Username Screen -->
+<div class="quiz-container" id="usernameScreen">
+    <h2>Enter Your Name</h2>
+    <input type="text" id="usernameInput" placeholder="Your name" autocomplete="off">
+    <button type="button" onclick="startQuiz()">Start Quiz</button>
+</div>
+
+<!-- Quiz Screen -->
+<div class="quiz-container" id="quiz" style="display:none;">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="timer">
+            ⏱ <span id="time">10</span>s
+        </div>
+    </div>
+
+    <!-- Language Toggle -->
+    <button class="lang-btn" id="langToggle" type="button">বাংলা</button>
+
+    <!-- Question -->
+    <h2 id="question"></h2>
+
+    <!-- Options -->
+    <ul class="options">
+        <li>
+            <label class="option" for="a">
+                <input type="radio" name="answer" id="a" value="a">
+                <span id="a_text"></span>
+            </label>
+        </li>
+        <li>
+            <label class="option" for="b">
+                <input type="radio" name="answer" id="b" value="b">
+                <span id="b_text"></span>
+            </label>
+        </li>
+        <li>
+            <label class="option" for="c">
+                <input type="radio" name="answer" id="c" value="c">
+                <span id="c_text"></span>
+            </label>
+        </li>
+        <li>
+            <label class="option" for="d">
+                <input type="radio" name="answer" id="d" value="d">
+                <span id="d_text"></span>
+            </label>
+        </li>
+    </ul>
+
+    <!-- Submit Button -->
+    <button id="submit" type="button">Next</button>
+</div>
+
+<script src="js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+/* ===== Global ===== */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+}
+
+/* ===== Container ===== */
+.quiz-container {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== Username Screen ===== */
+#usernameScreen h2 {
+    margin-bottom: 10px;
+}
+
+#usernameScreen input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+#usernameScreen button {
+    background: #667eea;
+}
+
+/* ===== Top Bar ===== */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress {
+    flex: 1;
+    background: #ddd;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: #667eea;
+    transition: width 0.3s ease;
+}
+
+.timer {
+    font-weight: bold;
+    color: #e63946;
+    white-space: nowrap;
+}
+
+/* ===== Language Button ===== */
+.lang-btn {
+    margin: 12px 0;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* ===== Question ===== */
+h2 {
+    text-align: center;
+    font-size: 18px;
+    margin: 12px 0 18px;
+}
+
+/* ===== Options (MCQ) ===== */
+.options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f5f7ff;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.option:hover {
+    background: #eef1ff;
+}
+
+.option input[type="radio"] {
+    accent-color: #667eea;
+    cursor: pointer;
+}
+
+/* Checked option style (safe for all browsers) */
+.option input[type="radio"]:checked + span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* ===== Buttons ===== */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #5563d6;
+}
+
+/* ===== History ===== */
+.history {
+    margin-top: 15px;
+}
+
+.history li {
+    background: #f2f2f2;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 16px;
+    }
+}
